@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.newcatch.method.FragmentCatchMethod">
+
+    <data>
+        <variable
+            name="methodViewModel"
+            type="com.example.pecapp.screens.newcatch.method.CatchMethodViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_catch_bait"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@={methodViewModel.bait}"
+            app:layout_constraintBottom_toTopOf="@+id/editText7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_catch_groundbait"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@={methodViewModel.groundbait}"
+            app:layout_constraintBottom_toTopOf="@+id/editText8"
+            app:layout_constraintStart_toStartOf="@+id/editText6"
+            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_catch_method"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@={methodViewModel.method}"
+            app:layout_constraintBottom_toTopOf="@+id/editText9"
+            app:layout_constraintStart_toStartOf="@+id/editText7"
+            app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_catch_duration"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@={methodViewModel.duration}"
+            app:layout_constraintBottom_toTopOf="@+id/button_method_next"
+            app:layout_constraintStart_toStartOf="@+id/editText8"
+            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+        <Button
+            android:id="@+id/button_method_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

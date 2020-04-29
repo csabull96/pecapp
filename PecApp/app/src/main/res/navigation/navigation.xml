@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.pecapp.screens.home.FragmentHome"
+        android:label="PecApp"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentNewCatchDate"
+            app:destination="@id/fragmentNewCatchDate"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentHome"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAbout"
+        android:name="com.example.pecapp.FragmentAbout"
+        android:label="App Adatok"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/fragmentCatchHistory"
+        android:name="com.example.pecapp.screens.catchlog.FragmentCatchLog"
+        android:label="Fogási napló"
+        tools:layout="@layout/fragment_catch_log" />
+    <fragment
+        android:id="@+id/fragmentBaits"
+        android:name="com.example.pecapp.FragmentBaits"
+        android:label="Csalik"
+        tools:layout="@layout/fragment_baits" />
+    <fragment
+        android:id="@+id/fragmentLocations"
+        android:name="com.example.pecapp.FragmentLocations"
+        android:label="Helyszínek"
+        tools:layout="@layout/fragment_locations" />
+    <fragment
+        android:id="@+id/fragmentCatchCertificate"
+        android:name="com.example.pecapp.screens.catchcertificate.FragmentCatchCertificate"
+        android:label="Oklevél"
+        tools:layout="@layout/fragment_catch_certificate">
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewCatchFish"
+        android:name="com.example.pecapp.screens.newcatch.fish.FragmentNewCatchFish"
+        android:label="Hal"
+        tools:layout="@layout/fragment_new_catch_fish">
+        <action
+            android:id="@+id/action_fragmentNewCatchFish_to_fragmentNewCatchMethod"
+            app:destination="@id/fragmentNewCatchMethod"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentNewCatchFish"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currentCatch"
+            app:argType="com.example.pecapp.database.data.Catch" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewCatchMethod"
+        android:name="com.example.pecapp.screens.newcatch.method.FragmentCatchMethod"
+        android:label="Módszer"
+        tools:layout="@layout/fragment_new_catch_method">
+        <action
+            android:id="@+id/action_fragmentNewCatchMethod_to_fragmentNewCatchLocation"
+            app:destination="@id/fragmentNewCatchLocation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentNewCatchMethod"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currentCatch"
+            app:argType="com.example.pecapp.database.data.Catch" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewCatchWeather"
+        android:name="com.example.pecapp.screens.newcatch.weather.FragmentCatchWeather"
+        tools:layout="@layout/fragment_new_catch_weather" >
+        <action
+            android:id="@+id/action_fragmentNewCatchDateAndLocation_to_fragmentCatchCertificate"
+            app:destination="@id/fragmentCatchCertificate"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentHome"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currentCatch"
+            app:argType="com.example.pecapp.database.data.Catch" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewCatchDate"
+        android:name="com.example.pecapp.screens.newcatch.date.FragmentCatchDate"
+        android:label="Dátum"
+        tools:layout="@layout/fragment_new_catch_date">
+        <action
+            android:id="@+id/action_fragmentNewCatchDate_to_fragmentNewCatchFish"
+            app:destination="@id/fragmentNewCatchFish"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentNewCatchDate"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currentCatch"
+            app:argType="com.example.pecapp.database.data.Catch" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewCatchLocation"
+        android:name="com.example.pecapp.screens.newcatch.location.FragmentCatchLocation"
+        android:label="Helyszín"
+        tools:layout="@layout/fragment_new_catch_location">
+        <action
+            android:id="@+id/action_fragmentNewCatchLocation_to_fragmentNewCatchWeather"
+            app:destination="@id/fragmentNewCatchWeather"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragmentNewCatchLocation"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currenetCatch"
+            app:argType="com.example.pecapp.database.data.Catch" />
+    </fragment>
+</navigation>

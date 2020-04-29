@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">PecApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_message">Köszöntelek a PecApp Alkalmazásban</string>
+    <string name="new_trophy">Új fogás</string>
+
+    <string name="button_add_catch">fogás hozzáadása</string>
+    <string name="text_congratulation">Gratulálok a fogáshoz!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="text_about">Ceated by Csaba Sandor.\n2020.03.14.\n1.0.0</string>
+    <string name="menu_item_about">App Adatok</string>
+    <string name="menu_item_new_catch">Kezdőlap</string>
+    <string name="menu_item_catches">Fogási napló</string>
+    <string name="menu_item_baits">Csalik</string>
+    <string name="menu_item_locations">Helyszínek</string>
+    <string name="menu_item_share">Megosztás</string>
+    <string name="clear_catch_log">Fogási napló törlése</string>
+    <string name="fragment_home_temperature">Hőmérséklet:</string>
+    <string name="fragment_home_atmospheric_pressure">Légnyomás:</string>
+    <string name="fragment_home_humidity">Páratartalom:</string>
+    <string name="fragment_home_no_temperature">- °C</string>
+    <string name="fragment_home_no_atmospheric_pressure">- hPa</string>
+    <string name="fragment_home_no_humidity">- %</string>
+    <string name="fragment_home_location">Helyszín:</string>
+    <string name="fragment_home_no_location">-</string>
+
+    // new catch text view hints
+    <string name="hint_catch_type">Halfaj</string>
+    <string name="hint_catch_weight">Súly</string>
+    <string name="hint_catch_length">Hossz</string>
+    <string name="hint_catch_temperature">Hőmérséklet</string>
+    <string name="hint_catch_atmospheric_pressure">Légnyomás</string>
+    <string name="hint_catch_humidity">Páratartalom</string>
+    <string name="hint_catch_bait">Csali</string>
+    <string name="hint_catch_groundbait">Etetőanyag</string>
+    <string name="hint_catch_method">Horgászmódszer</string>
+    <string name="hint_catch_duration">Fárasztási idő</string>
+    <string name="hint_catch_released">Vissza lett engedve?</string>
+    <string name="hint_catch_time">Időpont</string>
+    <string name="hint_catch_location">Helység</string>
+    <string name="hint_catch_note">Feljegyzések</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_next">Következő</string>
+    <string name="button_done">Kész</string>
+    <string name="hint_catch_date">Dátum</string>
+    <string name="button_change">Megváltoztatás</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentHome"
+        android:title="@string/menu_item_new_catch" />
+    <item
+        android:id="@+id/fragmentCatchHistory"
+        android:title="@string/menu_item_catches" />
+    <item
+        android:id="@+id/fragmentBaits"
+        android:title="@string/menu_item_baits" />
+    <item
+        android:id="@+id/fragmentLocations"
+        android:title="@string/menu_item_locations" />
+    <item
+        android:id="@+id/fragmentAbout"
+        android:title="@string/menu_item_about" />
+</menu>
